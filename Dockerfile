@@ -18,3 +18,6 @@ RUN set -xe; \
 COPY requirements.txt /app/
 RUN python3 -m venv venv
 RUN . venv/bin/activate && pip3 install --no-cache-dir -r requirements.txt
+
+COPY app.js .
+RUN node app.js
